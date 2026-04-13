@@ -17,14 +17,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                // Pull source code from Git
-                git branch: 'main',
-                    url: 'https://github.com/berkberaozer/pipelined-clinic.git'
-            }
-        }
-
         stage('Compile & Test') {
             steps {
                 // Compile the Java source code and run unit tests
